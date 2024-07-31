@@ -1,17 +1,3 @@
-**Ansible / Terraform**
-
-오승욱 강사님
-
-uvely@naver.com
-
----
-
-앤서블 문서 링크
-
-=> https://url.kr/irk6kg
-
----
-
 # 1. Ansible 소개
 
 </br>
@@ -102,7 +88,11 @@ VMware, Rocky 설치
 
 3. **inventory 설정**
 
-**1. 네트워크 연결**
+</br>
+
+</br>
+
+### 1. 네트워크 연결
 
 ![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-12-17-00-image.png)
 
@@ -147,6 +137,8 @@ mobaXterm에서 172.16.0.200 접속
 모듈 정상 동작 확인
 
 ![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-12-47-00-image.png)
+
+</br>
 
 가상머신 종료
 
@@ -197,7 +189,7 @@ serverA, serverB도 이름 변경
 
 ---
 
-**2.ssh 키 생성 및 전달**
+### 2.ssh 키 생성 및 전달
 
 ```
 //key-pair 생성
@@ -226,7 +218,7 @@ ssh-keygen
 
 ---
 
-**3.inventory 설정**
+### 3.inventory 설정
 
 `vi inventory`
 
@@ -254,11 +246,11 @@ DNS (Domain Name Service)
 
 `ansible -i inventory -m ping serverA`
 
-`ansible`: Ansible 명령어로, Ansible에서 단일 모듈을 실행하는 데 사용됩니다.
+`ansible`: Ansible 명령어로, Ansible에서 단일 모듈을 실행하는 데 사용.
 
-`-i inventory`: 인벤토리 파일을 지정합니다. 인벤토리 파일은 관리 대상 호스트의 목록을 포함합니다.
+`-i inventory`: 인벤토리 파일을 지정. 인벤토리 파일은 관리 대상 호스트의 목록을 포함.
 
-`-m ping`: `ping` 모듈을 사용합니다. `ping` 모듈은 단순히 Ansible이 대상 호스트에 접근할 수 있는지를 확인합니다.
+`-m ping`: `ping` 모듈을 사용. 단순히 Ansible이 대상 호스트에 접근할 수 있는지를 확인
 
 ![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-15-23-33-image.png)
 
