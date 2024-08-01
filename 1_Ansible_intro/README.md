@@ -44,7 +44,7 @@ ex. Chaos Monkey (Netflix)
 
         |___플레이북 (실제 수행해야 하는 작업 목록/ yaml파일로 작성)
 
-![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-10-57-25-image.png)
+<img src="img/1.png">
 
 </br>
 
