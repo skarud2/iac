@@ -62,7 +62,7 @@ ex. Chaos Monkey (Netflix)
 
 </br>
 
-![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-11-13-47-image.png)
+<img src="img/2.png">
 
 </br>
 
@@ -94,7 +94,7 @@ VMware, Rocky 설치
 
 ### 1. 네트워크 연결
 
-![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-12-17-00-image.png)
+<img src="img/3.png">
 
 1: lo:
 
@@ -120,13 +120,13 @@ ipv4.address 172.16.0.200/24 \
 ipv4.method manual
 ```
 
-![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-12-31-03-image.png)
+<img src="img/4.png">
 
 </br>
 
 mobaXterm에서 172.16.0.200 접속
 
-![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-12-37-13-image.png)
+<img src="img/5.png">
 
 `yum install epel-release`
 
@@ -136,7 +136,7 @@ mobaXterm에서 172.16.0.200 접속
 
 모듈 정상 동작 확인
 
-![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-12-47-00-image.png)
+<img src="img/6.png">
 
 </br>
 
@@ -146,7 +146,7 @@ mobaXterm에서 172.16.0.200 접속
 poweroff
 ```
 
-![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-14-12-04-image.png)
+<img src="img/7.png">
 
 중지(suspend) 상태 => 설정 변경 불가
 
@@ -156,7 +156,7 @@ poweroff
 
 가상머신 복사(clone)
 
-![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-14-15-06-image.png)
+<img src="img/8.png">
 
 full clone 해야 원본에 영향X
 
@@ -196,13 +196,13 @@ serverA, serverB도 이름 변경
 ssh-keygen
 ```
 
-![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-15-09-39-image.png)
+<img src="img/9.png">
 
-![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-15-09-55-image.png)
+<img src="img/10.png">
 
 </br>
 
-![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-15-11-44-image.png)
+<img src="img/11.png">
 
 `cat`: 파일의 내용을 출력하는 명령어.
 
@@ -210,7 +210,7 @@ ssh-keygen
 
 </br>
 
-![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-15-15-38-image.png)
+<img src="img/12.png">
 
 `ssh-copy-id` 명령어를 실행하여 공개 키를 원격 서버에 복사
 
@@ -222,7 +222,7 @@ ssh-keygen
 
 `vi inventory`
 
-![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-15-15-04-image.png)
+<img src="img/13.png">
 
 </br>
 
@@ -240,7 +240,7 @@ DNS (Domain Name Service)
 
 `vi /etc/hosts`
 
-![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-15-22-01-image.png)
+<img src="img/14.png">
 
 </br>
 
@@ -252,6 +252,6 @@ DNS (Domain Name Service)
 
 `-m ping`: `ping` 모듈을 사용. 단순히 Ansible이 대상 호스트에 접근할 수 있는지를 확인
 
-![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-15-23-33-image.png)
+<img src="img/15.png">
 
 </br>
