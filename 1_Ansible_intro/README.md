@@ -196,13 +196,13 @@ serverA, serverB도 이름 변경
 ssh-keygen
 ```
 
-<img src="img/9.png">
+
 
 <img src="img/10.png">
 
 </br>
 
-<img src="img/11.png">
+
 
 `cat`: 파일의 내용을 출력하는 명령어.
 
