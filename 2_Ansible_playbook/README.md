@@ -45,6 +45,7 @@ password 물어보지 않게 -> 자동화 위해
 `vi /etc/sudoers`
 
 ![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-15-44-47-image.png)
+<img src="img/1.png">
 
 ansible-user 추가로 작성
 
@@ -57,6 +58,7 @@ ansible-user 추가로 작성
 : 현재 사용자 세션에서 `ansible-user` 사용자로 전환하는 데 사용
 
 ![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-16-01-50-image.png)
+<img src="img/2.png">
 
 `-` : 로그인 셸을 시작하여 해당 사용자의 환경 설정 파일을 로드 
 
@@ -77,6 +79,7 @@ ansible-user 추가로 작성
 시스템의 호스트 이름과 IP 주소 매핑 정보를 담고 있는 `/etc/hosts` 파일의 **내용**을 출력
 
 ![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-15-54-58-image.png)
+<img src="img/3.png">
 
 </br>
 
@@ -157,6 +160,7 @@ db2.test.com
 `vi inventory`
 
 ![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-16-30-17-image.png)
+<img src="img/4.png">
 
 `ansible -i inventory -m ping all`
 
@@ -173,10 +177,12 @@ db2.test.com
 이 명령어를 실행하면 각 호스트에 대해 ping을 시도하고, 연결이 성공하면 "pong" 메시지를 반환. 이 과정을 통해 Ansible이 각 호스트에 접근할 수 있는지, Ansible의 환경이 올바르게 구성되었는지를 확인할 수 있다.
 
 ![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-16-31-17-image.png)
+<img src="img/5.png">
 
 `ansible -i inventory -m ping webservers`
 
 ![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-16-32-06-image.png)
+<img src="img/6.png">
 
 </br>
 
@@ -254,3 +260,4 @@ hosts에 입력된 값은 인벤토리에 포함되어 있는 목록을 선택�
 * 플레이북을 여러 번 실행하는 것이 안전
 
 ![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-08-04-14-35-10-스크린샷%202024-07-31%20105606.png)
+<img src="img/7.png">
