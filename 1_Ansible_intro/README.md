@@ -44,9 +44,7 @@ ex. Chaos Monkey (Netflix)
 
         |___플레이북 (실제 수행해야 하는 작업 목록/ yaml파일로 작성)
 
-<<<<<<< HEAD
-![image](./img/1.png)
-=======
+
 <img src="img/1.png">
 
 
