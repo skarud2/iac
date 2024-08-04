@@ -48,7 +48,7 @@ ex. Chaos Monkey (Netflix)
 ![image](./img/1.png)
 =======
 <img src="img/1.png">
->>>>>>> 1aefb3de61cff997ff44210e696415c9b8249e7d
+
 
 </br>
 
