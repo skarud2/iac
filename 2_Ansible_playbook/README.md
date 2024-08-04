@@ -12,6 +12,8 @@ Ansible 파일 유형
 
 </br>
 
+---
+
 ### 1. 구성파일
 
 각 섹션에 키-값 
@@ -52,11 +54,15 @@ ansible-user 추가로 작성
 
 `su - ansible-user`
 
-현재 사용자 세션에서 `ansible-user` 사용자로 전환하는 데 사용
+: 현재 사용자 세션에서 `ansible-user` 사용자로 전환하는 데 사용
 
 ![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-16-01-50-image.png)
 
-`-` 옵션은 로그인 셸을 시작하여 해당 사용자의 환경 설정 파일을 로드하게 합니다. 이는 새 사용자 세션을 시작하고, 그 사용자의 홈 디렉토리 및 환경 변수를 설정하는 데 유용합니다.
+`-` : 로그인 셸을 시작하여 해당 사용자의 환경 설정 파일을 로드 
+
+이는 새 사용자 세션을 시작하고, 그 사용자의 홈 디렉토리 및 환경 변수를 설정하는 데 유용
+
+`exit` : 로그아웃
 
 </br>
 
@@ -68,7 +74,7 @@ ansible-user 추가로 작성
 
 `cat /etc/hosts`
 
-시스템의 호스트 이름과 IP 주소 매핑 정보를 담고 있는 `/etc/hosts` 파일의 내용을 출력
+시스템의 호스트 이름과 IP 주소 매핑 정보를 담고 있는 `/etc/hosts` 파일의 **내용**을 출력
 
 ![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-15-54-58-image.png)
 
@@ -154,6 +160,18 @@ db2.test.com
 
 `ansible -i inventory -m ping all`
 
+- **`-i inventory`**: `inventory` 파일을 인벤토리로 지정
+  
+  인벤토리 파일은 Ansible이 관리할 호스트(서버)의 목록을 포함
+
+- **`-m ping`**: `ping` 모듈을 사용하여 각 호스트에 대해 ping 명령어를 실행
+  
+   이 ping은 ICMP 네트워크 핑이 아니라, Ansible이 대상 호스트에 접근 가능하고 Python이 설치되어 있는지 확인하는 간단한 체크
+
+- **`all`**: 인벤토리에 나열된 모든 호스트를 대상으로 명령어 실행
+
+이 명령어를 실행하면 각 호스트에 대해 ping을 시도하고, 연결이 성공하면 "pong" 메시지를 반환. 이 과정을 통해 Ansible이 각 호스트에 접근할 수 있는지, Ansible의 환경이 올바르게 구성되었는지를 확인할 수 있다.
+
 ![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-07-30-16-31-17-image.png)
 
 `ansible -i inventory -m ping webservers`
@@ -164,7 +182,7 @@ db2.test.com
 
 </br>
 
-**범위 지정**
+##### 범위 지정
 
 `[처음값:마지막값]`
 
@@ -192,13 +210,13 @@ db2.test.com
 
 - 단일 플레이에는 작업 대상이 되는 관리 호스트 정보와 작업 내용을 담고 있는 정보가 필요
 
-- hosts: 작업대상
+- `hosts`: 작업대상
 
-- tasks: 작업내용
+- `tasks`: 작업내용
 
-- ---: 시작 마커
+- `---`: 시작 마커
 
-- ...: 종료 마커 (보통 생략)
+- `...`: 종료 마커 (보통 생략)
 
 </br>
 
@@ -224,3 +242,15 @@ hosts에 입력된 값은 인벤토리에 포함되어 있는 목록을 선택�
 ```
 
 실제로 수행할 작업 목록을 구성
+
+</br>
+
+##### 플레이북 실행
+
+`ansible-playbook 파일이름.확장자`: 제어노드에서 플레이북 파일의 내용을 읽어 플레이를 실행하는 명령어
+
+* Ansible 플레이북의 작업은 멱등
+
+* 플레이북을 여러 번 실행하는 것이 안전
+
+![](C:\Users\KDP\AppData\Roaming\marktext\images\2024-08-04-14-35-10-스크린샷%202024-07-31%20105606.png)
